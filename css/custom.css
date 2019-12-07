@@ -1,0 +1,34 @@
+.rule{
+  text-align: left;
+}
+.rule::before{
+  content:"👉";
+}
+.rule-list{
+  display: block!important;
+}
+
+.rule-list li{
+  margin-left: 2em;
+}
+
+.code pre{
+  border-radius: 10px;
+}
+.code code{
+  border-radius: 10px;
+  color: #000;
+}
+.code--bad code{
+  background: #ff000024;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+.code--good code{
+  background: #00ff0024;
+  border: 1px solid green;
+}
+
+.code .hljs-string{
+  color: #888;
+}
