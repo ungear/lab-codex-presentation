@@ -32,3 +32,8 @@
 .code .hljs-string{
   color: #888;
 }
+
+/* for functions */
+.code .hljs-title{
+  color: #00A;
+}

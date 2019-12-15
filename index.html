@@ -26,95 +26,119 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Student Codex</section>
-				<section>
-					<h3>Variables</h3>
-				</section>
+<section>Student Codex</section>
 
-				<section>
-					<h4>Variables</h4>
-					<h4 class="rule">Avoid one letter names</h4>
-					<div class="code code--bad"><pre><code class='javascript' data-trim data-noescape>
-						// bad
-						let d = dataSource.getUser();
-					</code></pre></div>
-					<div class="code code--good"><pre><code class='javascript' data-trim data-noescape>
-						// good
-						let userProfile = dataSource.getUser();
-					</code></pre></div>
-				</section>
+<section>
+	<h3>Variables</h3>
+</section>
+
+<section>
+	<h4>Variables</h4>
+	<h4 class="rule">Avoid one letter names</h4>
+	<div class="code code--bad"><pre><code class='javascript' data-trim data-noescape>
+		// bad
+		let d = dataSource.getUser();
+	</code></pre></div>
+	<div class="code code--good"><pre><code class='javascript' data-trim data-noescape>
+		// good
+		let userProfile = dataSource.getUser();
+	</code></pre></div>
+</section>
 				
-				<section>
-					<h4>Variables</h4>
-					<h4 class="rule">Use is/can/have prefixes for boolean variables</h4>
-					<div class="code code--bad"><pre><code class='javascript' data-trim data-noescape>
-						// bad
-						let valid = users.filer(x => x.valid).length > 0;
-						let edit = user.isAdmin || user.isEditor;
-					</code></pre></div>
-					<div class="code code--good"><pre><code class='javascript' data-trim data-noescape>
-						// good
-						let haveValidUsers = users.filer(x => x.valid).length > 0;
-						let isEditingAllowed = user.isAdmin || user.isEditor;
-					</code></pre></div>
-				</section>
+<section>
+	<h4>Variables</h4>
+	<h4 class="rule">Use is/can/have prefixes for boolean variables</h4>
+	<div class="code code--bad"><pre><code class='javascript' data-trim data-noescape>
+		// bad
+		let valid = users.filer(x => x.valid).length > 0;
+		let edit = user.isAdmin || user.isEditor;
+	</code></pre></div>
+	<div class="code code--good"><pre><code class='javascript' data-trim data-noescape>
+		// good
+		let haveValidUsers = users.filer(x => x.valid).length > 0;
+		let isEditingAllowed = user.isAdmin || user.isEditor;
+	</code></pre></div>
+</section>
 
-				<section>
-						<h4>Variables</h4>
-						<h4 class="rule">Use postfixes to define measure units (pixels, seconds)</h4>
-						<div class="code code--bad"><pre><code class='javascript' data-trim data-noescape>
-							// bad
-							const delay = 500;
-							setTimeout(() => {}, delay)
-						</code></pre></div>
-						<div class="code code--good"><pre><code class='javascript' data-trim data-noescape>
-							// bad
-							const delayMs = 500;
-							setTimeout(() => {}, delayMs)
-						</code></pre></div>
-					</section> 
+<section>
+	<h4>Variables</h4>
+	<h4 class="rule">Use postfixes to define measure units (pixels, seconds)</h4>
+	<div class="code code--bad"><pre><code class='javascript' data-trim data-noescape>
+		// bad
+		const delay = 500;
+		setTimeout(() => {}, delay)
+	</code></pre></div>
+	<div class="code code--good"><pre><code class='javascript' data-trim data-noescape>
+		// bad
+		const delayMs = 500;
+		setTimeout(() => {}, delayMs)
+	</code></pre></div>
+</section> 
 
-				<section>
-						<h4>Variables</h4>
-						<h4 class="rule">Use let and const instead of var</h4>
-						<div class="code code--bad"><pre><code class='javascript' data-trim data-noescape>
-							// bad
-							var operationStatus = "initialized"; 
-							var isEditingAllowed = user.isAdmin || user.isEditor;
+<section>
+	<h4>Variables</h4>
+	<h4 class="rule">Use let and const instead of var</h4>
+	<div class="code code--bad"><pre><code class='javascript' data-trim data-noescape>
+		// bad
+		var operationStatus = "initialized"; 
+		var isEditingAllowed = user.isAdmin || user.isEditor;
 
-							operationStatus = isEditingAllowed
-								? "enabled"
-								: "disabled"
-						</code></pre></div>
-						<div class="code code--good"><pre><code class='javascript' data-trim data-noescape>
-							// good
-							let operationStatus = "initialized"; 
-							const isEditingAllowed = user.isAdmin || user.isEditor;
+		operationStatus = isEditingAllowed
+			? "enabled"
+			: "disabled"
+	</code></pre></div>
+	<div class="code code--good"><pre><code class='javascript' data-trim data-noescape>
+		// good
+		let operationStatus = "initialized"; 
+		const isEditingAllowed = user.isAdmin || user.isEditor;
 
-							operationStatus = isEditingAllowed
-								? "enabled"
-								: "disabled"
-						</code></pre></div>
-					</section>
+		operationStatus = isEditingAllowed
+			? "enabled"
+			: "disabled"
+	</code></pre></div>
+</section>
 
-					<section>
-							<h4>Variables</h4>
-							<h4 class="rule">Make names more detailed by using adjectives</h4>
-							<div class="code code--bad"><pre><code class='javascript' data-trim data-noescape>
-								// bad
-								const books = dataSource.getBooks();
-								const someBooks = books
-								  .filter(x => x.numberOfPages < 100)
-								  .filter(x => x.genre === "detective");
-							</code></pre></div>
-							<div class="code code--good"><pre><code class='javascript' data-trim data-noescape>
-								// good
-								const books = dataSource.getBooks();
-								const shortDetectiveBooks = books
-								  .filter(x => x.numberOfPages < 100)
-								  .filter(x => x.genre === "detective");
-							</code></pre></div>
-						</section>
+<section>
+	<h4>Variables</h4>
+	<h4 class="rule">Make names more detailed by using adjectives</h4>
+	<div class="code code--bad"><pre><code class='javascript' data-trim data-noescape>
+		// bad
+		const books = dataSource.getBooks();
+		const someBooks = books
+			.filter(x => x.numberOfPages < 100)
+			.filter(x => x.genre === "detective");
+	</code></pre></div>
+	<div class="code code--good"><pre><code class='javascript' data-trim data-noescape>
+		// good
+		const books = dataSource.getBooks();
+		const shortDetectiveBooks = books
+			.filter(x => x.numberOfPages < 100)
+			.filter(x => x.genre === "detective");
+	</code></pre></div>
+</section>
+
+<section>
+	<h3>Functions</h3>
+</section>
+
+<section>
+	<h4>Functions</h4>
+	<h4 class="rule">Use desciptive and eloquent names</h4>
+	<div class="code code--bad"><pre><code class='javascript' data-trim data-noescape>
+		// bad
+		function updateUser(user){
+			user.isActive = true;
+		}
+	</code></pre></div>
+	<div class="code code--good"><pre><code class='javascript' data-trim data-noescape>
+		// good
+		function makeUserActive(user){
+			user.isActive = true;
+		}
+	</code></pre></div>
+</section>
+
+
 			</div>
 		</div>
 
